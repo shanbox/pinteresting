@@ -1,4 +1,6 @@
 Pinteresting::Application.routes.draw do
+  resources :pins
+
   get "pages/home"
   devise_for :users
   root "pages#home"

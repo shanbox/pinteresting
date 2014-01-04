@@ -1,0 +1,27 @@
+<h1>Pins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pins.each do |pin| %>
+      <tr>
+        <td><%= pin.description %></td>
+        <td><%= link_to 'Mostrar', pin %></td>
+        <td><%= link_to 'Editar', edit_pin_path(pin) %></td>
+        <td><%= link_to 'Deletar', pin, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Pin', new_pin_path %>
