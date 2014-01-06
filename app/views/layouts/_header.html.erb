@@ -17,6 +17,7 @@
     <ul class="nav navbar-nav navbar-right">
       
       <% if user_signed_in? %>
+        <li><%= link_to 'Novo Pin', new_pin_path %></li>
         <li><%= link_to "Página Inicial", pins_path %></li>
         <li><%= link_to "Dados da Conta", edit_user_registration_path %></li>
         <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
